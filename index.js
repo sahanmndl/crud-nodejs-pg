@@ -17,7 +17,7 @@ app.use('/api/user', userRouter)
 app.use('/api/post', postRouter)
 
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL
+    connectionString: "postgres://postgres:sahan007@localhost:5432/social-media"
 })
 
 pool.connect().then(() => app.listen(process.env.PORT || 8000))
